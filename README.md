@@ -45,3 +45,4 @@ Will be done with a help of [js-code-to-svg-flowchart tool](https://github.com/B
 ## Languages
 - [Chinese](./stack/languages/chinese/book/Intro.md)
 - [Korean](./stack/languages/korean/book/Intro.md)
+- [Russian](./stack/languages/russian/book/Intro.md)
