@@ -73,7 +73,7 @@ https://github.com/facebook/react/blob/v15.4.2/src/renderers/dom/client/ReactMou
 
 <em>0.4 Часть 0 упрощенно (кликабельно)</em>
 
-И наверное мы еще поправим тут пробелы и выравнивание:
+И наверное мы еще уберем тут пустое место и поправим выравнивание:
 
 [![](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/0/part-0-B.svg)](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/0/part-0-B.svg)
 
