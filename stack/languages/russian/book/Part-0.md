@@ -88,7 +88,7 @@ https://github.com/facebook/react/blob/v15.4.2/src/renderers/dom/client/ReactMou
 И мы закончили!
 
 
-[На следующую страницу: Часть 1 >>](../../../../stack/book/Part-1.md)
+[На следующую страницу: Часть 1 >>](./Part-1.md)
 
 [<< На предыдущую страницу: Вступление](./Intro.md)
 
