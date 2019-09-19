@@ -50,7 +50,7 @@ https://github.com/facebook/react/blob/v15.4.2/src/renderers/dom/client/ReactRec
 И мы закончили!
 
 
-[На следующую страницу: Часть 3 >>](../../../../stack/book/Part-3.md)
+[На следующую страницу: Часть 3 >>](./Part-3.md)
 
 [<< На предыдущую страницу: Часть 1](./Part-1.md)
 
