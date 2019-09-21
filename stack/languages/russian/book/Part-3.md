@@ -95,7 +95,7 @@ https://github.com/facebook/react/blob/v15.4.2/src/renderers/shared/stack/reconc
 И мы закончили!
 
 
-[На следующую страницу: Часть 4 >>](../../../../stack/book/Part-3.md)
+[На следующую страницу: Часть 4 >>](./Part-4.md)
 
 [<< На предыдущую страницу: Часть 2](./Part-2.md)
 
