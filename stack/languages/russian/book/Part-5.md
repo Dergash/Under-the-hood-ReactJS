@@ -60,7 +60,7 @@ https://github.com/facebook/react/blob/v15.4.2/src/renderers/dom/shared/ReactDOM
 И мы закончили!
 
 
-[На следующую страницу: Часть 6 >>](../../../../stack/book/Part-6.md)
+[На следующую страницу: Часть 6 >>](./Part-6.md)
 
 [<< На предыдущую страницу: Часть 4](./Part-4.md)
 
