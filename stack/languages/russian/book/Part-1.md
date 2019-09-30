@@ -2,7 +2,7 @@
 
 [![](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/1/part-1.svg)](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/1/part-1.svg)
 
-<em>1.0 Part 1 (clickable)</em>
+<em>1.0 Часть 1 (кликабельно)</em>
 
 ### Transaction
 

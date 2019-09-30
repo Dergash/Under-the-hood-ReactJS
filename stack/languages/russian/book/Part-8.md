@@ -45,7 +45,7 @@ https://github.com/facebook/react/blob/v15.4.2/src/isomorphic/modern/class/React
 И мы закончили!
 
 
-[На следующую страницу: Часть 9 >>](../../../../stack/book/Part-9.md)
+[На следующую страницу: Часть 9 >>](./Part-9.md)
 
 [<< На предыдущую страницу: Часть 7](./Part-7.md)
 
