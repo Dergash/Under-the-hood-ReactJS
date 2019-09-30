@@ -100,4 +100,4 @@ https://github.com/facebook/react/blob/v15.4.2/src/renderers/shared/stack/reconc
 [<< На предыдущую страницу: Часть 2](./Part-2.md)
 
 
-[К оглавлению](../../README.md)
+[К оглавлению](./README.md)

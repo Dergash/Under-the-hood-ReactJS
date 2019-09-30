@@ -93,4 +93,4 @@ https://github.com/facebook/react/blob/v15.4.2/src/renderers/dom/client/ReactMou
 [<< На предыдущую страницу: Вступление](./Intro.md)
 
 
-[К оглавлению](../../README.md)
+[К оглавлению](./README.md)

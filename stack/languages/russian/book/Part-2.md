@@ -55,4 +55,4 @@ https://github.com/facebook/react/blob/v15.4.2/src/renderers/dom/client/ReactRec
 [<< На предыдущую страницу: Часть 1](./Part-1.md)
 
 
-[К оглавлению](../../README.md)
+[К оглавлению](./README.md)

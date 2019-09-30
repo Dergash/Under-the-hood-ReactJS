@@ -65,4 +65,4 @@ https://github.com/facebook/react/blob/v15.4.2/src/renderers/dom/shared/ReactDOM
 [<< На предыдущую страницу: Часть 4](./Part-4.md)
 
 
-[К оглавлению](../../README.md)
+[К оглавлению](./README.md)
