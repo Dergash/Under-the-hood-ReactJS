@@ -54,7 +54,7 @@ ReactErrorUtils.invokeGuardedCallback = function (name, func, a) {
 
 <em>9.3 Часть 9 упрощенно и с рефакторингом (кликабельно)</em>
 
-Вот теперь отлично. По сути, это все что происходит на этой стадии. Поэтому мы возьмем эту ключевую выдержку из *Части 8* и поместим ее на итоговую схему процесса `обновления`:
+Вот теперь отлично. По сути, это все что происходит на этой стадии. Поэтому мы возьмем эту ключевую выдержку из *Части 9* и поместим ее на итоговую схему процесса `обновления`:
 
 [![](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/9/part-9-C.svg)](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/9/part-9-C.svg)
 
@@ -63,7 +63,7 @@ ReactErrorUtils.invokeGuardedCallback = function (name, func, a) {
 И мы закончили!
 
 
-[На следующую страницу: Часть 10 >>](../../../../stack/book/Part-10.md)
+[На следующую страницу: Часть 10 >>](./Part-10.md)
 
 [<< На предыдущую страницу: Часть 8](./Part-8.md)
 
