@@ -88,7 +88,7 @@ class ExampleApplication extends React.Component {
 
     render() {
         return <div>
-            <button onClick={this.onClickHandler.bind(this)}> Кнопка обновления состояни </button>
+            <button onClick={this.onClickHandler.bind(this)}> Кнопка обновления состояния </button>
             <ChildCmp childMessage={this.state.message} />
             А также некоторый текст!
         </div>
