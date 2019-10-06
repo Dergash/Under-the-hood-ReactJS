@@ -38,7 +38,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
     }
 }
 ```
-https://github.com/facebook/react/blob/v15.4.2/ssrc/renderers/shared/shared/shouldUpdateReactComponent.js#L25
+https://github.com/facebook/react/blob/v15.4.2/src/renderers/shared/shared/shouldUpdateReactComponent.js#L25
 
 Хорошо, в случае с нашим `ExampleApplication` мы просто обновили `state` и на `render` это особо не повлияло, так что давайте пойдем посмотрим второй сценарий, где есть само обновление.
 
