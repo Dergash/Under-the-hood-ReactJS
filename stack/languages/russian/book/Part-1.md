@@ -82,7 +82,7 @@ var TRANSACTION_WRAPPERS = [FLUSH_BATCHED_UPDATES, RESET_BATCHED_UPDATES];
 
 [![](./images/1/part-1-C.svg)](./images/1/part-1-C.svg)
 
-<em>1.5 Часть 1 ключевые моменты (кликабельно)</em>
+<em>1.5 Часть 1 основные моменты (кликабельно)</em>
 
 И мы закончили!
 
