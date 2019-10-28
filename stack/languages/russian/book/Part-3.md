@@ -16,9 +16,9 @@
 
 ### Назначаем модуль обновления экземпляра (updater)
 
-Этот `updater` (2), возвращаемый из `transaction.getUpdateQueue()`, в действительности является модулем `ReactUpdateQueue`. Почему же тогда он **назначается здесь**? Потому что `ReactCompositeComponent` (класс, который мы сейчас рассматриваем) используется на всех платформах, а модули обновления будут разные, поэтому мы назначаем его динамически во время монтирования в зависимости от платформы.
+Этот `updater` (2), возвращаемый из `transaction.getUpdateQueue()`, в действительности является модулем `ReactUpdateQueue`. Почему же тогда он **назначается здесь**? Потому что `ReactCompositeComponent` (класс, который мы сейчас рассматриваем) используется на всех платформах, а модули обновления будут разные, поэтому мы назначаем его динамически во время монтирования, в зависимости от платформы.
 
-Хорошо. Прямо сейчас нам этот `updater` не нужен, но возьмем его на заметку. `updater` по-настоящему **важен**, очень скоро он опять всплывет, когда мы будем говорить про хорошо всем известный метод **`setState`**.
+Хорошо. Прямо сейчас нам этот `updater` не нужен, но возьмем его на заметку. `updater` по-настоящему **важен**, совсем скоро он всплывет опять, когда мы будем говорить про хорошо всем известный метод **`setState`**.
 
 В принципе, на этом этапе экземпляру компонента назначается не только `updater`, но и `props`, `context` и `refs`.
 
@@ -33,13 +33,13 @@ inst.context = publicContext;
 inst.refs = emptyObject;
 inst.updater = updateQueue;
 ```
-https://github.com/facebook/react/blob/v15.4.2/src/renderers/shared/stack/reconciler/ReactCompositeComponent.js#L255
+[Исходный код](https://github.com/facebook/react/blob/v15.4.2/src/renderers/shared/stack/reconciler/ReactCompositeComponent.js#L255)
 
-Благодаря этому в вашем коде вы можете обращаться к `props` из экземпляра компонента  через `this.props`.
+Благодаря этому в вашем коде вы можете обращаться к `props` из экземпляра компонента через `this.props`.
 
 ### Создание экземпляра ExampleApplication
 
-С помощью вызова `_constructComponent` (3) и пройдя через пару промежуточных конструкторов, мы наконец создаем `new ExampleApplication()`. Это то место, где  будет вызван наш собственный конструктор, так что это первый раз, когда экосистема React'а наконец коснулась нашего кода. Неплохо.
+С помощью вызова `_constructComponent` (3) и пройдя через пару промежуточных конструкторов, мы наконец создаем `new ExampleApplication()`. Это то место, где будет вызван наш собственный конструктор, так что это первый раз, когда экосистема React'а наконец коснулась нашего кода. Неплохо.
 
 ### Выполняем первоначальное монтирование
 
@@ -64,17 +64,17 @@ if (inst.componentWillMount) {
     }
 }
 ```
-https://github.com/facebook/react/blob/v15.4.2/src/renderers/shared/stack/reconciler/ReactCompositeComponent.js#L476
+[Исходный код](https://github.com/facebook/react/blob/v15.4.2/src/renderers/shared/stack/reconciler/ReactCompositeComponent.js#L476)
 
 Не соврали. Но когда `state` пересчитается, мы все-таки вызовем метод `render`, и да, это именно тот `render`, который мы сами написали в нашем компоненте, так что еще один контакт с нашим собственным кодом.
 
-Хорошо, дальше мы создадим экземпляра React'овского компонента. Так, погодите-ка... Мы ведь уже видели этот вызов `this._instantiateReactComponent` (5), правильно? Да, но тогда мы создавали экземпляр `ReactCompositeComponent` для нашего компонента `ExampleApplication`. В этот раз мы собираемся создать экземпляры VDOM'а для его дочернего компонента, взяв за основу элемент, который наш компонент возвращает в методе `render`. В нашем конкретном случае метод рендера возвращает `div`, и ему в VDOM'е соответствует `ReactDOMComponent`. Когда экземпляр создан, мы опять вызываем `ReactReconciler.mountComponent`, но на этот раз в качестве `internalInstance` мы передаем только что созданный экземпляр `ReactDOMComponent`.
+Хорошо, дальше мы создадим экземпляр React'овского компонента. Так, погодите-ка... Мы ведь уже видели этот вызов `this._instantiateReactComponent` (5), правильно? Да, но тогда мы создавали экземпляр `ReactCompositeComponent` для нашего компонента `ExampleApplication`. В этот раз мы собираемся создать экземпляры VDOM'а для его дочернего компонента, взяв за основу элемент, который наш компонент возвращает в методе `render`. В нашем конкретном случае метод рендера возвращает `div`, и ему в VDOM'е соответствует `ReactDOMComponent`. Когда экземпляр создан, мы опять вызываем `ReactReconciler.mountComponent`, но на этот раз в качестве `internalInstance` мы передаем только что созданный экземпляр `ReactDOMComponent`.
 
 И теперь вызываем на нем `mountComponent`... 
 
-### Хорошо, *Часть 3* мы закончили.
+### Хорошо, мы закончили *Часть 3*.
 
-Давайте вспомним, как мы сюда попали - глянем еще раз на схему, затем уберем из нее избыточные и менее важные куски, и она станет вот такой:
+Давайте повторим, как мы сюда попали - глянем еще раз на схему, уберем из нее не очень важные куски, и она станет вот такой:
 
 [![](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/3/part-3-A.svg)](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/3/part-3-A.svg)
 
@@ -84,13 +84,13 @@ https://github.com/facebook/react/blob/v15.4.2/src/renderers/shared/stack/reconc
 
 [![](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/3/part-3-B.svg)](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/3/part-3-B.svg)
 
-<em>3.2 Часть 3 упрощенно и с рефакторингом (кликабельно)</em>
+<em>3.2 Часть 3 упрощенно после обработки (кликабельно)</em>
 
-Вот теперь отлично. По сути, это все что происходит на этой стадии. Поэтому мы возьмем эту ключевую выдержку из *Части 3* и поместим ее на итоговую схему процесса `монтирования`:
+Замечательно. По сути, это все что произошло на данном этапе. Поэтому мы возьмем основные моменты *Части 3* и поместим их на итоговую схему процесса `монтирования`:
 
-[![](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/3/part-3-C.svg)](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/3/part-3-C.svg)
+[![](./images/3/part-3-C.svg)](./images/3/part-3-C.svg)
 
-<em>3.3 Часть 3 ключевые моменты (кликабельно)</em>
+<em>3.3 Часть 3 основные моменты (кликабельно)</em>
 
 И мы закончили!
 
